@@ -1,0 +1,38 @@
+h1{
+  color: #d118cb;
+  font-size: 30;
+}
+
+h3{
+  color: rgb(80, 0, 221);
+  font-size: 20px;
+}
+
+li{
+  font-size: 15;
+  color: rgb(0, 142, 255);
+}
+
+ul{
+  border: 2px solid blue;
+  width: 300px;
+}
+
+body{
+  background-image: url(https://classic.exame.com/wp-content/uploads/2020/12/jupiter.jpg?quality=70&strip=info&w=1024);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#featured{
+  font-size: 20px;
+  color: green;
+}
+
+.important{
+  color: red;
+  font-size: 20px;
+}
+
+
+

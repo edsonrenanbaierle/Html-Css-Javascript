@@ -1,0 +1,22 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 + h3{
+  color: green;
+}
+
+a[href='#']{
+  color: orange;
+  background: green;
+  font-size: 20px;
+}
+
+li:nth-of-type(2){
+  color: aqua;
+}
+
+a:visited{
+  color: black;
+}

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar&family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Geostar', cursive;
+  margin: 20px auto 40px auto;
+  width: 20%;
+  border: 2px solid blueviolet;
+}
+
+p{
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}

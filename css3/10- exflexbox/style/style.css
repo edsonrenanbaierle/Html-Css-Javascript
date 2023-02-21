@@ -1,0 +1,44 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#container{
+  min-width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+button{
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+  border-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+button:hover{
+  border-color: red;
+}
+
+#gap{
+  display: flex;
+  gap: 0px 15px;
+}
+
+#img-icon{
+  height: 50px;
+  width: 50px;
+}
+
+#img-logo{
+  width: 200px;
+}
