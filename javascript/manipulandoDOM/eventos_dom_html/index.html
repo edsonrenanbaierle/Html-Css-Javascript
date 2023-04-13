@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Dom</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <h1>Eventos no Dom</h1>
+  <form action="#">
+    <div>
+      <label for="mouseInput">Entrada do mouse: </label>
+      <input type="mouseInput" name="mouseInput" id="mouseInput" onmouseenter="onMouseEnter()">
+    </div>
+    <br>
+    <div>
+      <label for="changeValue">Ao mudar o Valor</label>
+      <input type="text" name="changeValue" id="changeValue" onchange="onChange()">
+    </div>
+    <br>
+    <div>
+      <label for="entradaMouse">onFocus(Entrada do Mouse): </label>
+      <input type="text" name="entradaMouse" id="entradaMouse" onfocus="onFocus()">
+    </div>
+    <br>
+    <div>
+      <label for="blurElement">Desfocando Elemento:</label>
+      <input type="text" name="blurElement" id="blurElement" onblur="onBlur()">
+    </div>
+    <br>
+    <div>
+      <label for="goOver">Passe por cima(Aqui!), veja no console
+      </label>
+      <input type="text" name="goOver" id="goOver" onmouseover="onMouseOver()">
+    </div>
+    <br>
+    <button onclick="onClick()">Clique-aqui</button>
+  </form>
+</body>
+</html>
