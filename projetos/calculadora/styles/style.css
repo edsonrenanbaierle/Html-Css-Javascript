@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator{
+  width: 400px;
+  border: 2px solid ;
+  padding: 20px;
+  border-radius: 3%;
+  background-color: rgb(243, 243, 243);
+  border-color: #2E5C27;
+  display: grid;
+  grid-template-columns: repeat(4, fr);
+  gap: 10px 20px;
+  grid-template-areas: 
+  "input input input input"
+  "button-1 button-2 button-3 button-4"
+  "button-5 button-6 button-7 button-8"
+  "button-9 button-10 button-11 button-12"
+  "button-13 button-14 button-15 button-16"
+  "button-17 button-18 button-19 button-20"
+  "button-21 button-22 button-23 button-24"
+  "respost respost respost respost";
+}
+
+.inputs{
+  height: 40px;
+  width: 356px;
+  border-radius: 10px;
+  border-color: #28A814;
+}
+
+.buttons{
+  width: 70px;
+  padding: 20px 15px;
+  color: black;
+  font-size: 15px;
+  background-color: white;
+  border-color: #28af13;
+  border-radius: 10px;
+}
+
+.buttons:hover{
+  background-color: #22ff00;
+  border-color: black;
+  transition: 0.4s;
+}
+
+#input{
+  grid-area: input;
+}
+
+#button-1{
+  grid-area: button-1;
+}
+
+#button-2{
+  grid-area: button-2;
+}
+
+#button-3{
+  grid-area: button-3;
+}
+
+#button-4{
+  grid-area: button-4;
+}
+
+#button-5{
+  grid-area: button-5;
+}
+
+#button-6{
+  grid-area: button-6;
+}
+
+#button-7{
+  grid-area: button-7;
+}
+
+#button-8{
+  grid-area: button-8;
+}
+
+#button-9{
+  grid-area: button-9;
+}
+
+#button-10{
+  grid-area: button-10;
+}
+
+#button-11{
+  grid-area: button-11;
+}
+
+#button-12{
+  grid-area: button-12;
+}
+
+#button-13{
+  grid-area: button-13;
+}
+
+#button-14{
+  grid-area: button-14;
+}
+
+#button-15{
+  grid-area: button-15;
+}
+
+#button-16{
+  grid-area: button-16;
+}
+
+
+#button-17{
+  grid-area: button-17;
+}
+
+#button-18{
+  grid-area: button-18;
+}
+
+#button-19{
+  grid-area: button-19;
+}
+
+#button-20{
+  grid-area: button-20;
+}
+
+#button-21{
+  grid-area: button-21;
+}
+
+#button-22{
+  grid-area: button-22;
+}
+
+#button-23{
+  grid-area: button-23;
+}
+
+#button-24{
+  grid-area: button-24;
+}
+
+#respost{
+  grid-area: respost;
+}
+
+@media(max-width: 425px){
+  #calculator{
+    max-width: 320px;
+  }
+
+  .buttons{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .inputs{
+    max-width: 273px;
+  }
+}
+
+@media(max-width: 332px){
+  #calculator{
+    max-width: 280px;
+    padding: 10px;
+  }
+
+  .buttons{
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 13px;
+  }
+
+  .inputs{
+    max-width: 253px;
+  }
+}
