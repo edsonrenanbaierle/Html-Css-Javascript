@@ -5,6 +5,7 @@
 }
 
 body{
+  background-color: rgba(0, 0, 0, 0.767);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -29,7 +30,7 @@ body{
   "button-13 button-14 button-15 button-16"
   "button-17 button-18 button-19 button-20"
   "button-21 button-22 button-23 button-24"
-  "respost respost respost respost";
+  "copy respost respost respost";
 }
 
 .inputs{
@@ -37,6 +38,8 @@ body{
   width: 356px;
   border-radius: 10px;
   border-color: #28A814;
+  text-align: right;
+  font-size: 25px;
 }
 
 .buttons{
@@ -53,6 +56,15 @@ body{
   background-color: #22ff00;
   border-color: black;
   transition: 0.4s;
+}
+
+#copy{
+  border-radius: 10px;
+  border-color: #22ff00;
+}
+
+#respost{
+  width: 260px;
 }
 
 #input{
@@ -154,6 +166,10 @@ body{
 
 #button-24{
   grid-area: button-24;
+}
+
+#copy{
+  grid-area: copy;
 }
 
 #respost{
