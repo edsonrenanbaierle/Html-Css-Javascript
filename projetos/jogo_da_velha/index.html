@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+  <title>Jogo da Velha</title>
+</head>
+<body>
+  <header>
+    <h1>Jogo da Velha</h1>
+  </header>
+  <section>
+    <button id="switch-teme" class="button-special">Switch theme</button>
+    <button id="open-modal" class="button-special">Recomeçar o Jogo</button>
+  </section>
+  <main>
+    <div id="main">
+      <button data-place="0.1"></button>
+      <button data-place="0.2"></button>
+      <button data-place="0.3"></button>
+      <button data-place="1.1"></button>
+      <button data-place="1.2"></button>
+      <button data-place="1.3"></button>
+      <button data-place="2.1"></button>
+      <button data-place="2.2"></button>
+      <button data-place="2.3"></button>
+    </div>
+  </main>
+
+
+  <section id="fade" class="hide">
+    <div id="modal" class="hide">
+      <h1>Jogo da Velha</h1>
+      <label for="playerOne">Nome Jogador 1: </label>
+      <input type="text" name="playerOne" id="playerOne">
+      <label for="playerTwo">Nome Jogador 2: </label>
+      <input type="text" name="playerTwo" id="playerTwo">
+      <button id="start" type="button">Começar</button>
+    </div>
+  </section>
+</body>
+</html>
