@@ -33,11 +33,14 @@ section{
   margin: 1rem 0rem 1rem 0rem;
 }
 
+
+
 /*jogo da velha*/
 main{
   display: flex;
   justify-content: center;
   align-content: center;
+  place-content: center;
 }
 
 button{
@@ -46,16 +49,17 @@ button{
   color: var(--font-color);
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .button-special, #close-modal{
   background-color: var(--button-collor);
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
 
-.button-special:hover, #close-modal:hover{
-  cursor: pointer;
-  opacity: 1;
-}
+
 
 #main{
   display: grid;
@@ -63,6 +67,14 @@ button{
   grid-template-rows: 1fr 1fr 1fr;
   width: 25rem;
   height: 25rem;
+}
+
+#main > button{
+  font-size: 5rem;
+}
+
+#main button.win{
+  background-color: var(--button-collor);
 }
 
 /*model*/

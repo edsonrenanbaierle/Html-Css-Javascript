@@ -14,29 +14,30 @@
   </header>
   <section>
     <button id="switch-teme" class="button-special">Switch theme</button>
+    <h2><span id="turnPlayer">Vez de(do): </span></h2>
     <button id="open-modal" class="button-special">Recomeçar o Jogo</button>
   </section>
   <main>
     <div id="main">
-      <button data-place="0.1"></button>
-      <button data-place="0.2"></button>
-      <button data-place="0.3"></button>
-      <button data-place="1.1"></button>
-      <button data-place="1.2"></button>
-      <button data-place="1.3"></button>
-      <button data-place="2.1"></button>
-      <button data-place="2.2"></button>
-      <button data-place="2.3"></button>
+      <button data-region="0.0"></button>
+      <button data-region="0.1"></button>
+      <button data-region="0.2"></button>
+      <button data-region="1.0"></button>
+      <button data-region="1.1"></button>
+      <button data-region="1.2"></button>
+      <button data-region="2.0"></button>
+      <button data-region="2.1"></button>
+      <button data-region="2.2"></button>
     </div>
   </main>
 
   <div id="fade" class="hide"></div>
   <div id="modal" class="hide">
     <h1>Jogo da Velha</h1>
-    <label for="playerOne">Nome Jogador 1: </label>
-    <input type="text" name="playerOne" id="playerOne">
-    <label for="playerTwo">Nome Jogador 2: </label>
-    <input type="text" name="playerTwo" id="playerTwo">
+    <label for="playerOne">Nome Jogador 1(X): </label>
+    <input type="text" name="playerOne" id="playerOne" placeholder="">
+    <label for="playerTwo">Nome Jogador 2(O): </label>
+    <input type="text" name="playerTwo" id="playerTwo" placeholder="">
     <button id="close-modal" type="button">Começar</button>
   </div>
 </body>
