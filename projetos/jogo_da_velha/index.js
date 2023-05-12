@@ -1,6 +1,9 @@
 const boardRegions = document.querySelectorAll('#main > button') //regioes do tabuleiro 
 let vBoard = [] //tabuleiro virtual 
 let turnPlayer = '' //turno do player
+const TemaSwitch = document.querySelector('main') // troca de tema
+const buttonTemaSwitch = document.getElementById('switch-teme')
+const root = document.querySelector(':root')
 
 
 function updateTurn(){
@@ -50,6 +53,19 @@ function getWinRegions(){
   return winRegions
 }
 
+function handleWin(winRegions){
+  winRegions.forEach(function(element){
+    document.querySelector('[data-region="'+ element +'"]').classList.add('win')
+  })
+
+  const playerName = document.getElementById('turnPlayer').innerText
+  document.querySelector('h2').innerText = playerName + ' Venceu!'
+
+  document.querySelectorAll('#main > button').forEach(function(ev){
+    disableRegion(ev)
+  })
+}
+
 function handleBoardClick(ev){//function que lidara com o click da "placa"
   const region = ev.currentTarget.dataset.region //região que foi clicada
   const rowColumnPair = region.split('.')//onde tiver o ponto ira quebrar em um array
@@ -67,17 +83,33 @@ function handleBoardClick(ev){//function que lidara com o click da "placa"
 
   const regionsWin = getWinRegions()
   if(regionsWin.length > 0){
-    //função colocar ainda
+    handleWin(regionsWin)//lidar com a vitoria
   }else if(vBoard.flat().includes('')){
     turnPlayer = turnPlayer === 'playerOne' ? 'playerTwo' : 'playerOne'
-    updateTurn()
+    updateTurn(regionsWin)
   }else{
     document.querySelector('#turnPlayer').innerText = 'EMPATE'
   }
 }
 
 
-
+buttonTemaSwitch.addEventListener('click', function(){//troca de tema
+  if(TemaSwitch.dataset.theme === 'dark'){
+    root.style.setProperty('--bg-color', '#f1f5f9')
+    root.style.setProperty('--border-color', '#aaa')
+    root.style.setProperty('--font-color', '#212529')
+    root.style.setProperty('--primary-color', '#26834a')
+    root.style.setProperty('--button-collor', '#2dff12')
+    TemaSwitch.dataset.theme = 'light'
+  }else{
+    root.style.setProperty('--bg-color', '#212529')
+    root.style.setProperty('--border-color', '#666')
+    root.style.setProperty('--font-color', '#f1f5f9')
+    root.style.setProperty('--primary-color', '#4dff91')
+    root.style.setProperty('--button-collor', '#35802B')
+    TemaSwitch.dataset.theme = 'dark'
+  }
+})
 
 
 // Obtém o botão de abrir o modal e o modal
@@ -90,6 +122,11 @@ const closeModal = modal.querySelector("#close-modal");//serve também como o st
 
 // Adiciona evento de clique ao botão de abrir o modal
 openModal.addEventListener("click", function() {
+  document.querySelector('h2').innerHTML = '<span id="turnPlayer">Vez de(do): </span>'
+  document.getElementById('playerOne').value = ''       
+  document.getElementById('playerTwo').value = ''
+  document.getElementById('playerOne').placeholder = ''
+  document.getElementById('playerTwo').placeholder = ''
   initializeGame()
   modal.style.display = 'block';
   fade.style.display = "block";
@@ -105,11 +142,6 @@ openModal.addEventListener("click", function() {
   modal.style.zIndex = '10';
   modal.style.backgroundColor = 'var(--bg-color)';
   modal.style.color = 'var(--font-color)';
-  document.getElementById('playerOne').value = ''
-  document.getElementById('playerTwo').value = ''
-  document.querySelector('h2').innerHTML = '<span id="turnPlayer">Vez de(do): </span>'
-  document.getElementById('playerOne').placeholder = ''
-  document.getElementById('playerTwo').placeholder = ''
   document.querySelectorAll('#main > button').forEach(enableRegions)
 });
 
