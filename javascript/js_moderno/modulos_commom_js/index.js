@@ -1,0 +1,5 @@
+const meioAplication = require("./teste1.js")
+const finalAplication = require("./teste2.js")
+console.log('Iniciando a aplicação')
+meioAplication()
+finalAplication()
