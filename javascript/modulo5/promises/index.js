@@ -2,24 +2,35 @@ function execute(){
   return new Promise((resolve, reject) => {
     console.log('A promise está sendo executada!')
     setTimeout(() => {
-      if(true){
-        resolve(true)
+      if(false){
+        resolve(42)
+      }else{
+        reject('Ocorreu um erro')
       }
-      console.log('Resolvendo a promise')
-      reject(false)
+      
   }, 1000 * 2)
   })
 }
 
-const p = execute()
-console.log(p)
+execute().then((result) => {
+  console.log(`O resultado da promise foi: ${result}`)
+}).catch((error) =>{
+  console.log(`O motivo do erro foi: ${error}`)
+}).finally(() => {
+  console.log('A promise foi encerrada')
+})
 
-setTimeout(() => {
-  console.log(p)
- }, 1000 * 3)
 
 
 
+
+
+// const p = execute()
+// console.log(p)
+
+// setTimeout(() => {
+//   console.log(p)
+//  }, 1000 * 3)
 
 
 // const p = new Promise((resolve, reject) => {
