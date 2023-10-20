@@ -10,8 +10,11 @@ function createdCountryCard(country){
   flag.src = country.flags.svg
   flag.alt = countryName
 
+  const span = document.createElement('span')
+  span.innerText = `Capital: ${country.capital}`
 
-  card.append(name, flag)
+
+  card.append( name, flag, span)
   document.querySelector('#countries').append(card)
 }
 
