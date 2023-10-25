@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main>
+      <h3>Adicione Finanças</h3>
+      <form action="" id="form-addFinances">
+        <label for="nameOfFinance">Nome da Finançia</label>
+        <input type="text" id="nameOfFinance" name="nameOfFinance">
+
+        <label for="valueOfFinance">Valor</label>
+        <input type="text" id="valueOfFinance" name="valueOfFinance">
+
+        <button type="submit" id="finance-submit">Adicionar</button>
+      </form>
+    </main>
+
+    <main>
+      <h3>Remova Finanças</h3>
+      <form action="" id="form-removeFinances">
+        <label for="numberRemove">Id da Finançia</label>
+        <input type="text" id="numberRemove" name="numberRemove">
+
+        <button type="submit" id="finance-submit">Remover</button>
+      </form>
+    </main>
+
+    <main>
+      <h3>Edite Finanças</h3>
+      <form action="" id="form-editFinances">
+        <label for="numberEdit">Id da Finançia</label>
+        <input type="text" id="numberEdit" name="numberEdit">
+
+        <label for="nameEdit">Nome da Finançia</label>
+        <input type="text" id="nameEdit" name="nameEdit">
+
+        <label for="newValue">Novo valor</label>
+        <input type="text" id="newValue" name="newValue">
+
+        <button type="submit" id="finance-submit">Editar</button>
+      </form>
+    </main>
+
+    <section>
+      <h3>Saldo Total: R$<span id="valueFinances" > 0,00</span></h3>
+      <div id="finances">
+
+      </div>
+    </section>
+</body>
+</html>
